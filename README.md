@@ -1,6 +1,8 @@
 
 # `omeka-rake`
 
+[![Build Status](https://travis-ci.org/erochest/omeka-rake.png)](https://travis-ci.org/erochest/omeka-rake)
+
 This is a collection of [Rake][rake] tasks for working with [Omeka][omeka].
 
 Currently, this has one class: `SLab::Omeka::Rake::PackageTask`. This builds
