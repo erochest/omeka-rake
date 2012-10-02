@@ -1,0 +1,9 @@
+
+require 'slab/omeka/rake/package_task'
+
+SLab::Omeka::Rake::PackageTask.new('Something') do |pkg|
+  pkg.version = '1.0.0'
+  pkg.need_tar_gz = true
+  pkg.need_zip = true
+end
+
