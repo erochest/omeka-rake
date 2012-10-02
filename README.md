@@ -1,19 +1,30 @@
-= omeka-rake
 
-Description goes here.
+# `omeka-rake`
 
-== Contributing to omeka-rake
- 
-* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
-* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
-* Fork the project.
-* Start a feature/bugfix branch.
-* Commit and push until you are happy with your contribution.
-* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
-* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+This is a collection of [Rake][rake] tasks for working with [Omeka][omeka].
 
-== Copyright
+Currently, this has one class: `SLab::Omeka::Rake::PackageTask`. This builds
+packages using the naming conventions for Omeka plugins. (This means that the
+ZIP file will be named PLUGIN-VERSION.zip, and it will contain a directory
+PLUGIN/.)
 
-Copyright (c) 2012 Eric Rochester. See LICENSE.txt for
-further details.
+Here's an example of how to use it:
+
+```ruby
+require 'slab/omeka/rake/package_task'
+
+SLab::Omeka::Rake::PackageTask.new('Something') do |pkg|
+  # You'll probably want to set the version programmatically.
+  pkg.version = '1.0.0'
+  pkg.need_tar_gz = true
+  pkg.need_zip = true
+
+  pkg.package_files.include('README.md')
+  pkg.package_files.include('plugin.ini')
+  pkg.package_files.include('**/*.php')
+end
+```
+
+[rake]: http://rake.rubyforge.org/
+[omeka]: http://omeka.org/
 
