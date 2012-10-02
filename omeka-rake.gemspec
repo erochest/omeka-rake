@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Eric Rochester"]
   s.date = "2012-10-02"
-  s.description = "TODO: longer description of your gem"
+  s.description = "A (very small) collection of Rake tasks for working with Omeka plugins."
   s.email = "err8n@virginia.edu"
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -28,13 +28,14 @@ Gem::Specification.new do |s|
     "Rakefile.sample",
     "VERSION",
     "lib/slab/omeka/rake/package_task.rb",
+    "omeka-rake.gemspec",
     "spec/omeka_package_task_spec.rb"
   ]
   s.homepage = "http://github.com/erochest/omeka-rake"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.24"
-  s.summary = "TODO: one-line summary of your gem"
+  s.summary = "A (very small) collection of Rake tasks for working with Omeka plugins."
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
